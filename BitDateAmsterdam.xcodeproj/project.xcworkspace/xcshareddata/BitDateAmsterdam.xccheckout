@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>6CD45EA0-93FC-4911-8460-2B07E25C7B0A</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>BitDateAmsterdam</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>49CC0541D22D6F6676B7787F0CED7E52FEFC9C7C</key>
 		<string>https://github.com/vincentleeuwen/furry-octo-batman.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>BitDateAmsterdam.xcodeproj/project.xcworkspace</string>
+	<string>BitDateAmsterdam.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>49CC0541D22D6F6676B7787F0CED7E52FEFC9C7C</key>
