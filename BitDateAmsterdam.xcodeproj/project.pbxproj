@@ -14,6 +14,7 @@
 		580AE3901AFCE4FE00656BF3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 580AE38F1AFCE4FE00656BF3 /* Images.xcassets */; };
 		580AE3931AFCE4FE00656BF3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 580AE3911AFCE4FE00656BF3 /* LaunchScreen.xib */; };
 		580AE39F1AFCE4FE00656BF3 /* BitDateAmsterdamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580AE39E1AFCE4FE00656BF3 /* BitDateAmsterdamTests.swift */; };
+		580AE3AB1AFCE5F900656BF3 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580AE3AA1AFCE5F900656BF3 /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		580AE3981AFCE4FE00656BF3 /* BitDateAmsterdamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BitDateAmsterdamTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		580AE39D1AFCE4FE00656BF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		580AE39E1AFCE4FE00656BF3 /* BitDateAmsterdamTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitDateAmsterdamTests.swift; sourceTree = "<group>"; };
+		580AE3AA1AFCE5F900656BF3 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,8 +81,9 @@
 		580AE3821AFCE4FE00656BF3 /* BitDateAmsterdam */ = {
 			isa = PBXGroup;
 			children = (
-				580AE3851AFCE4FE00656BF3 /* AppDelegate.swift */,
 				580AE38A1AFCE4FE00656BF3 /* ViewController.swift */,
+				580AE3A91AFCE5A600656BF3 /* views */,
+				580AE3851AFCE4FE00656BF3 /* AppDelegate.swift */,
 				580AE38C1AFCE4FE00656BF3 /* Main.storyboard */,
 				580AE38F1AFCE4FE00656BF3 /* Images.xcassets */,
 				580AE3911AFCE4FE00656BF3 /* LaunchScreen.xib */,
@@ -113,6 +116,14 @@
 				580AE39D1AFCE4FE00656BF3 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		580AE3A91AFCE5A600656BF3 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				580AE3AA1AFCE5F900656BF3 /* CardView.swift */,
+			);
+			name = views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,6 +228,7 @@
 			files = (
 				580AE38B1AFCE4FE00656BF3 /* ViewController.swift in Sources */,
 				580AE3891AFCE4FE00656BF3 /* BitDateAmsterdam.xcdatamodeld in Sources */,
+				580AE3AB1AFCE5F900656BF3 /* CardView.swift in Sources */,
 				580AE3861AFCE4FE00656BF3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
