@@ -26,11 +26,6 @@ class CardView: UIView {
         initialize()
     }
     
-//    override init() {
-//        super.init()
-//    }
-    // Swift 1.2:
-    
     init() {
         super.init(frame: CGRectZero)
         initialize()
