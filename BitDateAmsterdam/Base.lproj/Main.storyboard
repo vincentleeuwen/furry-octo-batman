@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="yin-1i-e30">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rht-vN-DBK">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
@@ -56,11 +56,45 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="278" y="251"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="09x-H8-5OQ">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" id="rht-vN-DBK" customClass="LoginViewController" customModule="BitDateAmsterdam" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NIl-ef-PDa"/>
+                        <viewControllerLayoutGuide type="bottom" id="EBh-cQ-BYQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="B20-SX-DCI">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JLt-Vq-U8B">
+                                <rect key="frame" x="219" y="285" width="163" height="30"/>
+                                <state key="normal" title="Login with Facebook">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressedFBLogin:" destination="rht-vN-DBK" eventType="touchUpInside" id="1nX-4R-7sD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="JLt-Vq-U8B" secondAttribute="centerY" id="YgN-bH-SRw"/>
+                            <constraint firstAttribute="centerX" secondItem="JLt-Vq-U8B" secondAttribute="centerX" constant="-0.5" id="vp8-Ed-k4C"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rzt-2t-Tau" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1059" y="257"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7NP-mq-kj2">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yin-1i-e30" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="CardsNavController" automaticallyAdjustsScrollViewInsets="NO" id="yin-1i-e30" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="jaR-j8-Wiv">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

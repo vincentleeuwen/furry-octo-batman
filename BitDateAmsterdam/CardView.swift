@@ -36,7 +36,7 @@ class CardView: UIView {
     private func initialize() {
         // set layout for imageview
         imageView.setTranslatesAutoresizingMaskIntoConstraints(false)
-        imageView.backgroundColor = UIColor.redColor()
+        imageView.backgroundColor = UIColor.greenColor()
         // add imageview to cardview
         self.addSubview(imageView)
         
