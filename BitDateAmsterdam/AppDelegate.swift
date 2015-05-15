@@ -30,7 +30,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         } else {
             initialViewController = storyboard.instantiateViewControllerWithIdentifier("LoginViewController") as! UIViewController
         }
-//        self.presentViewController(initialViewController!)
+        
+        // push the viewController to the initial window
         self.window?.rootViewController = initialViewController
         self.window?.makeKeyAndVisible()
         
