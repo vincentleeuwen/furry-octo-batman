@@ -15,6 +15,25 @@ class CardView: UIView {
     private let imageView: UIImageView = UIImageView()
     private let nameLabel: UILabel = UILabel()
     
+    var name: String? {
+        didSet {
+            if let name = name {
+                // make sure name exists and otherwise set variable
+                nameLabel.text = name
+            }
+        }
+    }
+    
+    var image: UIImage? {
+        didSet {
+            if let image = image {
+                imageView.image = image
+            }
+        }
+    }
+    
+    
+    
     // override init
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)

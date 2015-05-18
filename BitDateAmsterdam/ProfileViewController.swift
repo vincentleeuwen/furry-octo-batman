@@ -44,7 +44,8 @@ class ProfileViewController: UIViewController {
     
 
     func goToCards(button: UIBarButtonItem) {
-        println("button pressed")
+//        println("button pressed")
+        pageController.goToNextVC()
     }
 
 }
