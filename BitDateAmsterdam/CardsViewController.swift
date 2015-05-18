@@ -23,6 +23,14 @@ class CardsViewController: UIViewController, SwipeViewDelegate {
     var backCard: Card?
     var frontCard: Card?
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationItem.titleView = UIImageView(image: UIImage(named: "nav-header"))
+        let leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "nav-back-button"), style: UIBarButtonItemStyle.Bordered, target: self, action: "goToProfile:")
+        navigationItem.setLeftBarButtonItem(leftBarButtonItem, animated: true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -40,6 +48,10 @@ class CardsViewController: UIViewController, SwipeViewDelegate {
         frontCard = createCard(frontCardTopMargin)
         cardStackView.addSubview(frontCard!.swipeView)
         
+    }
+    
+    func goToProfile(button: UIBarButtonItem) {
+        println("foo")
     }
     
     private func createCardFrame(topMargin: CGFloat)->CGRect{

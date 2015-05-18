@@ -36,16 +36,31 @@ class LoginViewController: UIViewController {
 //                            println(result)
                             user!["firstName"] = result["first_name"]
                             user!["gender"] = result["gender"]
-                            user!["picture"] = ((r["picture"] as! NSDictionary)["data"] as! NSDictionary) ["url"]
                             var dateFormatter = NSDateFormatter()
                             dateFormatter.dateFormat = "MM/dd/yyyy"
                             user!["birthDay"] = dateFormatter.dateFromString(r["birthday"] as! String)
-                            println(user)
-                        user!.saveInBackgroundWithBlock({
-                            success, error in
-                            println(success)
-                            println(error)
-                        })
+                        
+                        
+                            let pictureURL = ((r["picture"] as! NSDictionary)["data"] as! NSDictionary) ["url"] as! String
+                            let url = NSURL(string: pictureURL)
+                            let request = NSURLRequest(URL: url!)
+                        
+                            NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: {
+                                response, data, error in
+                                
+                                let imageFile = PFFile(name: "avatar.jpg", data: data) 
+                                user!["picture"] = imageFile
+                                user!.saveInBackgroundWithBlock(nil)
+                                
+                            })
+                        
+                        
+                        
+//                        user!.saveInBackgroundWithBlock({
+//                            success, error in
+//                            println(success)
+//                            println(error)
+//                        })
                     })
                 } else {
                     println("User logged in through facebook.")

@@ -18,6 +18,8 @@
 		580AE3AD1AFCF52300656BF3 /* SwipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580AE3AC1AFCF52300656BF3 /* SwipeView.swift */; };
 		580AE3B01AFCF7C900656BF3 /* CardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580AE3AF1AFCF7C900656BF3 /* CardsViewController.swift */; };
 		589A37DB1B06132900C0665A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589A37DA1B06132900C0665A /* LoginViewController.swift */; };
+		589A37DE1B06375400C0665A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589A37DD1B06375400C0665A /* User.swift */; };
+		58AA6F2D1B064234004A560A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AA6F2C1B064234004A560A /* ProfileViewController.swift */; };
 		58B9BD2E1B0366AC0022C297 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58B9BD2D1B0366AC0022C297 /* AudioToolbox.framework */; };
 		58B9BD301B0366BF0022C297 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58B9BD2F1B0366BF0022C297 /* CFNetwork.framework */; };
 		58B9BD321B0366C80022C297 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58B9BD311B0366C80022C297 /* CoreGraphics.framework */; };
@@ -61,6 +63,8 @@
 		580AE3AC1AFCF52300656BF3 /* SwipeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeView.swift; sourceTree = "<group>"; };
 		580AE3AF1AFCF7C900656BF3 /* CardsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardsViewController.swift; sourceTree = "<group>"; };
 		589A37DA1B06132900C0665A /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		589A37DD1B06375400C0665A /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		58AA6F2C1B064234004A560A /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		58B9BD2D1B0366AC0022C297 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		58B9BD2F1B0366BF0022C297 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		58B9BD311B0366C80022C297 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -134,6 +138,7 @@
 		580AE3821AFCE4FE00656BF3 /* BitDateAmsterdam */ = {
 			isa = PBXGroup;
 			children = (
+				589A37DC1B06374000C0665A /* Data */,
 				580AE3AE1AFCF79300656BF3 /* ViewControllers */,
 				580AE3A91AFCE5A600656BF3 /* views */,
 				580AE3851AFCE4FE00656BF3 /* AppDelegate.swift */,
@@ -187,8 +192,17 @@
 				589A37DA1B06132900C0665A /* LoginViewController.swift */,
 				580AE38A1AFCE4FE00656BF3 /* ViewController.swift */,
 				580AE3AF1AFCF7C900656BF3 /* CardsViewController.swift */,
+				58AA6F2C1B064234004A560A /* ProfileViewController.swift */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		589A37DC1B06374000C0665A /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				589A37DD1B06375400C0665A /* User.swift */,
+			);
+			name = Data;
 			sourceTree = "<group>";
 		};
 		58B9BD281B0366000022C297 /* Frameworks */ = {
@@ -361,7 +375,9 @@
 				580AE38B1AFCE4FE00656BF3 /* ViewController.swift in Sources */,
 				580AE3891AFCE4FE00656BF3 /* BitDateAmsterdam.xcdatamodeld in Sources */,
 				580AE3B01AFCF7C900656BF3 /* CardsViewController.swift in Sources */,
+				589A37DE1B06375400C0665A /* User.swift in Sources */,
 				580AE3AB1AFCE5F900656BF3 /* CardView.swift in Sources */,
+				58AA6F2D1B064234004A560A /* ProfileViewController.swift in Sources */,
 				580AE3AD1AFCF52300656BF3 /* SwipeView.swift in Sources */,
 				580AE3861AFCE4FE00656BF3 /* AppDelegate.swift in Sources */,
 			);
