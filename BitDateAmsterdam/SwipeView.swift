@@ -19,6 +19,10 @@ class SwipeView: UIView {
     
     weak var delegate: SwipeViewDelegate?
     
+    var direction: Direction?
+    
+    let overlay:UIImageView = UIImageView()
+    
 //    private let card: CardView = CardView()
     
     
@@ -26,7 +30,8 @@ class SwipeView: UIView {
     var innerView: UIView? {
         didSet {
             if let v = innerView {
-                self.addSubview(v)
+//                self.addSubview(v)
+                self.insertSubview(v, belowSubview: overlay)
                 v.frame = CGRect(x: 0, y: 0, width: frame.width, height: frame.height)
             }
         }
@@ -59,6 +64,11 @@ class SwipeView: UIView {
 //        card.setTranslatesAutoresizingMaskIntoConstraints(false)
 
 //        setConstraints()
+        
+        overlay.frame = CGRect(x: 0, y: 0, width: frame.width, height: frame.height)
+        addSubview(overlay)
+        
+
     }
     
     func dragged(gestureRecognizer: UIPanGestureRecognizer) {
@@ -76,6 +86,8 @@ class SwipeView: UIView {
             
             // move the center of the view with the drag
             center = CGPointMake(originalPoint!.x + distance.x, originalPoint!.y + distance.y)
+            
+            updateOverlay(distance.x)
 
         case UIGestureRecognizerState.Ended:
             
@@ -109,10 +121,26 @@ class SwipeView: UIView {
             })
     }
     
+    private func updateOverlay(distance: CGFloat) {
+        var newDirection: Direction
+        newDirection = distance < 0 ? Direction.Left : Direction.Right
+        
+        // check if direction has changed
+        if newDirection != direction {
+            direction = newDirection
+            // if so, update the overlay image based on the direction
+            overlay.image = direction == .Right ? UIImage(named: "yeah-stamp") : UIImage(named: "nah-stamp")
+        }
+        overlay.alpha = abs(distance) / (superview!.frame.width / 2)
+        
+    }
+    
     private func resetViewPositionAndTransformations() {
         UIView.animateWithDuration(0.2, animations: { () -> Void in
             self.center = self.originalPoint!
             self.transform = CGAffineTransformMakeRotation(0)
+            
+            self.overlay.alpha = 0
         })
         
     }
